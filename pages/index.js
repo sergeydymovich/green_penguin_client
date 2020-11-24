@@ -1,23 +1,25 @@
+import axios from "../utils/axios.utils";
+import Header from "../components/Header/Header";
 
 export default function Home({categories}) {
-  console.log(categories)
+
+
   return (
     
-    <div className={styles.wrapper}>
-      {categories.length > 0 && categories.map((el) => <h1>{el.name}</h1>)}
-      <header>
-        ХЕАДЕР
-      </header>
-      <main >
-        КОНТЕНТ
-      </main>
-
-      <footer>
-        ФУТЕР
-      </footer>
+    <div className="app" >
+      <Header />
     </div>
   )
 }
 
+Home.getInitialProps = async  () => {
 
+const categories = await axios.GET("/categories").then(res => {	
+  return res.data.categories;				
+}).catch(error =>  {
+  console.log(error);
+});
+
+  return { categories }
+}
 
