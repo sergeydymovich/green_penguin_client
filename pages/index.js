@@ -1,13 +1,14 @@
-import axios from "../utils/axios.utils";
 import Header from "../components/Header/Header";
+import Navigation from "../components/Navigation/Navigation";
+import axios from "../utils/axios.utils";
 
 export default function Home({categories}) {
-
 
   return (
     
     <div className="app" >
       <Header />
+      <Navigation />
     </div>
   )
 }

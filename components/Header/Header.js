@@ -9,9 +9,17 @@ export default function Header() {
         <h2 className={styles.description}>магазин натуральных продуктов</h2>
       </div>
       <div className={styles.searchContainer}>
-        <input className={styles.search} type="text" placeholder="Поиск..." />
+        <input
+          className={styles.search}
+          type="text"
+          placeholder="Поиск..." 
+        />
         <div className={styles.iconContainer}>
-          <img src="/search.svg" className={styles.searchIcon} alt="search-icon" />
+          <img
+            src="/search.svg"
+            className={styles.searchIcon}
+            alt="search-icon"
+          />
         </div>     
       </div>
       <div className={styles.phoneContainer}>
