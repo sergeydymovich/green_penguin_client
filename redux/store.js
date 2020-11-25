@@ -6,7 +6,7 @@ import { rootReducer } from "./reducers/index-reducer";
 let store
 
 
-function initStore(preloadedState = []) {
+function initStore(preloadedState = {}) {
   return createStore(
     rootReducer,
     preloadedState,

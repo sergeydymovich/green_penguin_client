@@ -19,4 +19,5 @@ a {
   max-width: 1366px;
   margin: 0 auto;
   min-height: 100vh;
+  border: solid 1px rgba(151, 151, 151, 0.5);
 }

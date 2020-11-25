@@ -1,8 +1,7 @@
 import { GET_CATEGORIES } from "../actions/categories.actions";
 
 const INITIAL_STATE = {
-	categoriesArr: ["sadas"],
-	counter: 0,
+	categoriesArr: [],
 };
 
 const categories = (state = INITIAL_STATE, action) => {
