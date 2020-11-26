@@ -1,0 +1,75 @@
+.catalog {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.list {
+	list-style: none;
+	border: solid 1px rgba(151, 151, 151, 0.5);
+	color: #666666;
+	cursor: pointer;
+	border-radius: 2px;
+}
+
+.item {
+	font-size: 15px;
+	border-bottom: solid 1px rgba(151, 151, 151, 0.5);
+}
+
+.item:last-child {
+	border-bottom: none;
+}
+
+.itemText {
+	padding: 9px 0px 9px 16px;
+}
+
+.active {
+	background-color: #5f9e52;
+	color: white;
+}
+
+.subList {
+	background-color: white;
+	color: #666666;
+	padding: 0px 30px;
+	border-radius: 2px;
+}
+
+
+.subItem {
+	padding: 5px 0px;
+}
+
+.brandItem {
+	display: flex;
+	align-items: center;
+	padding: 9px 16px;
+}
+
+.checkBox {
+	height: 16px;
+	width: 16px;
+	margin-right: 10px;
+	border-radius: 2px;
+	border: solid 1px rgba(151, 151, 151, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.checkBox:hover {
+	border-radius: 4px;
+}
+
+
+.activeBrand {
+	background-color:white;
+	border: solid 1px white;
+	background-color: #5f9e52;
+}
+
+.ok {
+	width: 9px;
+}

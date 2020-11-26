@@ -1,0 +1,15 @@
+.container {
+	display: flex;
+	padding: 0px 30px;
+	margin-top: 50px;
+	min-height: 65vh;
+}
+
+.catalogContainer {
+	width: 320px;
+	min-height: 100%;
+}
+
+.productsContainer {
+width: 100%;
+}
