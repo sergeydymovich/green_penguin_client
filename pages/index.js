@@ -4,14 +4,17 @@ import Main from "../components/Main/Main";
 import { useDispatch } from 'react-redux';
 import axios from "../utils/axios.utils";
 import { getCategories } from "../redux/actions/categories.actions";
+import { getProducts, productsAmount } from "../redux/actions/products.actions";
 import { useEffect } from "react";
 
-export default function Home({categObj, products}) {
+export default function Home({categObj, productsObj}) {
 const dispatch = useDispatch();
-console.log(products)
 useEffect(() => {
   const {categories, brands} = categObj;
+  const {products, count} = productsObj;
 
+  dispatch(getProducts(products));
+  dispatch(productsAmount(count));
   dispatch(getCategories(categories, brands));
 },[]);
   return (
@@ -27,18 +30,17 @@ useEffect(() => {
 Home.getInitialProps = async  () => {
 
 const categObj = await axios.GET("/categories").then(res => {	
-  console.log(res.data)
   return res.data;				
 }).catch(error =>  {
   console.log(error);
 });
 
-const products = await axios.GET(`/products?limit=9`).then(res => {	
-  return res.data.products	
-}).catch(error =>  {
-  console.log(error);
+const productsObj = await axios.GET(`/products?limit=9`).then(res => {	
+  return res.data	
+}).catch(err =>  {
+  console.log(err);
 });
 
-  return { categObj, products }
+  return { categObj, productsObj }
 }
 
