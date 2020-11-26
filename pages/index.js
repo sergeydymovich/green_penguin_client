@@ -35,7 +35,7 @@ const categObj = await axios.GET("/categories").then(res => {
   console.log(error);
 });
 
-const productsObj = await axios.GET(`/products?limit=9`).then(res => {	
+const productsObj = await axios.GET(`/products?limit=12`).then(res => {	
   return res.data	
 }).catch(err =>  {
   console.log(err);
