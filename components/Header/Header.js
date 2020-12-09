@@ -13,6 +13,11 @@ const addFilterWord = () => {
   if (word) dispatch(changeFilterWord(word));
 }
 
+const clearFilterWord = () => {
+  dispatch(changeFilterWord(""));
+  setWord("");
+}
+
 useEffect(() => {
   setWord(filterWord);
 },[filterWord])
@@ -37,7 +42,7 @@ useEffect(() => {
           src="/cross.svg"
           className={styles.crossIcon}
           alt="cross"
-          onClick={() => dispatch(changeFilterWord(""))}
+          onClick={clearFilterWord}
           />
       </div>
       }  

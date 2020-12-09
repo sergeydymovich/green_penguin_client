@@ -15,7 +15,7 @@ export default function Catalog() {
 		e.stopPropagation();
 		dispatch(selectSubCategory(sub))
 	}
- console.log("RENDER")
+
 	useEffect(() => {
 		setActiveCategory(categoriesArr.find(el => el.name === category));
 	},[category])
