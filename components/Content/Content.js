@@ -1,8 +1,8 @@
-import styles from "./Main.module.css";
+import styles from "./Content.module.css";
 import Catalog from "../Catalog/Catalog";
 import ProductList from "../ProductList/ProductList"
 
-export default function Main() {
+export default function Content() {
 
   return (
     <div className={styles.container}>
@@ -11,8 +11,7 @@ export default function Main() {
 			</div>
       <div className={styles.productsContainer}>
 				<ProductList />
-			</div>
-			
+			</div>		
     </div>    
     
   )

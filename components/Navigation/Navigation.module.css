@@ -8,9 +8,12 @@
 	list-style: none;
 	min-height: 75px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	padding: 0px 245px;
+	background-color: rgba(216, 216, 216, 0.15);
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+	flex-wrap: wrap;
 }
 
 .item {
@@ -24,6 +27,10 @@
 	cursor: pointer;
 }
 
+.growNavItem{
+	border: none;
+}
+
 .item:first-child {
 	padding-left: 0;
 }
@@ -33,7 +40,7 @@
 	border: none;
 }
 
-.cardWrapper {
+.cartWrapper {
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -41,10 +48,30 @@
 	display: flex;
 	min-height: 75px;
 	align-items: center;
+	cursor: pointer;
+	z-index: 5;
 }
 
-.card {
-	width: 40px;
+.countWrapper {
+	position: absolute;
+	top: 17px;
+	left: 11px;
+	width: 21px;	
+	height: 21px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	z-index: 10;
+	background-color: blue;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: #48c7ea;
+	color: white;
+	font-size: 15px;
+}
+
+.cart {
+	width: 37px;
 	margin-right: 5px;
 }
 

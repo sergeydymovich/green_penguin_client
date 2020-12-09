@@ -10,11 +10,25 @@
 	color: #666666;
 	cursor: pointer;
 	border-radius: 2px;
+	background-color: rgba(95, 158, 82, 0.12);
 }
 
 .item {
 	font-size: 15px;
 	border-bottom: solid 1px rgba(151, 151, 151, 0.5);
+}
+
+.list p::first-letter {
+    text-transform:capitalize;
+}
+
+.brands p {
+	text-transform:capitalize;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .item:last-child {
@@ -62,13 +76,31 @@
 	border-radius: 4px;
 }
 
+.activeSub {
+	color: #5f9e52;
+}
+
 
 .activeBrand {
-	background-color:white;
+	background-color: white;
 	border: solid 1px white;
 	background-color: #5f9e52;
 }
 
 .ok {
 	width: 9px;
+}
+
+.brands {
+	margin-top: 40px;
+	background-color: white;
+	max-height: 445px;
+	overflow: auto;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: normal;
+	color: #121112;
+	margin-bottom: 10px;
 }

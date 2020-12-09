@@ -1,0 +1,28 @@
+.footer {
+	min-height: 180px;
+	border-top: solid 1px rgba(151, 151, 151, 0.5);
+	padding: 30px 20px;
+	color: rgba(44, 39, 39, 0.87);
+	background-color: rgba(216, 216, 216, 0.15);
+	box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.06);
+}
+
+.footerBottom {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footerTop {
+	display: flex;
+	justify-content: space-between;
+}
+
+.image {
+	width: 30px;
+	height: 30px;
+}
+
+.image:nth-child(2) {
+	margin: 0px 15px;
+}
