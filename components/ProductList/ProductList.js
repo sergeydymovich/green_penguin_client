@@ -20,7 +20,7 @@ useEffect(() => {
     dispatch(getProductsRequest());
     axios.GET(`/products?category=${category}&subcategory=${subCategory}&brands=${brands}&offset=${activePage*pageSize}&sort=${sortBy}&word=${filterWord}&limit=${pageSize}`).then(res => {	
         dispatch(getProducts(res.data.products)); 
-        dispatch(getProductsAmount(res.data.count))								
+        dispatch(getProductsAmount(res.data.count));								
     }).catch(error =>  {
       console.log(error);
     });
@@ -47,13 +47,13 @@ useEffect(() => {
             className={cn(styles.priceFilter, {[styles.activeFilter]: sortBy === "price"})}
             onClick={() => dispatch(selectFilter("price"))}
           >
-            По цене {sortBy === "price" ? `🠧` : `🠥`}
+            По цене {sortBy === "price" ? `↓` : `↑` }   
           </p>
           <p
             className={cn(styles.alphFilter, {[styles.activeFilter]: sortBy === "alphabet"})}
             onClick={() => dispatch(selectFilter("alphabet"))}
           >
-            По алфавиту {sortBy === "alphabet" ? `🠧` : `🠥`}
+            По алфавиту {sortBy === "alphabet" ? `↓` : `↑`}
           </p>
           <p className={styles.reset} onClick={() => dispatch(changeFilterWord(""))}>Сбросить фильтры ✖</p>
         </div>

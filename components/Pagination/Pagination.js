@@ -10,7 +10,7 @@ const pages = useSelector(state => state.products.pages);
 const activePage = useSelector(state => state.request.activePage);
 
 const handleClick = (index) => {
-		dispatch(changeActivePage(index));
+		dispatch(changeActivePage(index));		
 	}
 
   return (
@@ -48,12 +48,16 @@ const handleClick = (index) => {
 				</button>
 				}	
 		
-				<button
-					className={ cn(styles.btn, styles.activeBtn)}
-					disabled={isLoading}
-				>
-				{activePage + 1}
-				</button>
+
+			 {pages > 1 &&
+			 	<button
+				 className={ cn(styles.btn, styles.activeBtn)}
+				 disabled={isLoading}
+			 	>
+			 {activePage + 1}
+			 </button>
+			 }	
+
 
 				{activePage < pages - 1 &&
 				<>	

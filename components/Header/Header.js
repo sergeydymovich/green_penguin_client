@@ -14,8 +14,9 @@ const addFilterWord = () => {
 }
 
 const clearFilterWord = () => {
-  dispatch(changeFilterWord(""));
   setWord("");
+  if (filterWord) dispatch(changeFilterWord(""));
+  
 }
 
 useEffect(() => {
