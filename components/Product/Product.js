@@ -8,6 +8,7 @@ import {
   decrementProduct,
 } from "../../redux/cartSlice";
 import cn from "classnames/bind";
+import Image from "next/image";
 
 function Product({ product }) {
   const { image, name, price, weight, volume, _id, count } = product;
@@ -16,7 +17,13 @@ function Product({ product }) {
   return (
     <div className={cn(styles.productContainer, { [styles.active]: count })}>
       <div className={styles.imageWrapper}>
-        <img className={styles.image} src={image} />
+        <Image
+          src={image}
+          alt="product"
+          layout="fill"
+          objectPosition="50% 50%"
+          objectFit="contain"
+        />
       </div>
       <p className={styles.name}>{name}</p>
       <div className={styles.info}>

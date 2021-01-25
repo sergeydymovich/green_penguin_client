@@ -5,6 +5,7 @@ import {
   decrementProduct,
   removeProduct,
 } from "../../redux/cartSlice";
+import Image from "next/image";
 
 export default function CartItem({ product }) {
   const { image, name, price, _id, count } = product;
@@ -13,7 +14,13 @@ export default function CartItem({ product }) {
   return (
     <div className={styles.cartProduct}>
       <div className={styles.imageWrapper}>
-        <img className={styles.image} src={image} />
+        <Image
+          src={image}
+          alt="product"
+          layout="fill"
+          objectPosition="50% 50%"
+          objectFit="contain"
+        />
       </div>
       <div className={styles.info}>
         <p className={styles.name}>{name}</p>
